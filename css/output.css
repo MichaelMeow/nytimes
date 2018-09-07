@@ -75,6 +75,18 @@
   font-size: 11px;
 }
 
+.cell {
+  padding-right: 25px;
+  margin-right: 15px;
+  border-right: 1px solid #ebebeb;
+}
+
+.cellBottom {
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ebebeb;
+}
+
 .quickNews {
   padding: 10px 0px;
   border-bottom: 1px double black;
@@ -87,9 +99,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 25px;
-  margin-right: 15px;
-  border-right: 1px solid #ebebeb;
 }
 .quickNews .sansHeadline {
   font-weight: bold;
@@ -106,11 +115,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.quickNews .stocks {
-  padding-right: 25px;
-  margin-right: 15px;
-  border-right: 1px solid #ebebeb;
 }
 .quickNews .stock {
   min-width: 120px;
@@ -129,6 +133,84 @@
   height: 4px;
   display: block;
   border-bottom: 1px double black;
+}
+
+.headline1 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Domine", serif;
+}
+
+.headline2 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Domine", serif;
+}
+
+.headline3 {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Domine", serif;
+}
+
+.subheadline {
+  color: #555555;
+  font-size: 12px;
+  font-family: "Domine", serif;
+}
+
+.updated {
+  color: #adadb0;
+  font-size: 11px;
+  font-family: "Domine", serif;
+}
+
+.updated {
+  color: #adadb0;
+  font-size: 11px;
+  font-family: "Domine", serif;
+}
+
+.updatedRed {
+  color: #adadb0;
+  font-size: 11px;
+  font-family: "Domine", serif;
+  color: red;
+}
+
+.opinionAuthor {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Domine", serif;
+  color: #adadb0;
+}
+
+.mainBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.mainBody ul {
+  padding: 0;
+}
+.mainBody .mainLeftContent {
+  width: 66.6666666667%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainBody .mainLeftContent .oneLeft {
+  width: 50%;
+}
+.mainBody .mainLeftContent .oneRight {
+  width: 50%;
+}
+.mainBody .mainRightContent {
+  width: 33.3333333333%;
+}
+.mainBody .mainRightContent img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=output.css.map */
