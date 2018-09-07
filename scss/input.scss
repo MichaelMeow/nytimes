@@ -12,6 +12,11 @@ $grey: #aaa;
   flex-direction: row;
   justify-content: space-between;
 }
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 
 // main
 .content {
@@ -28,7 +33,7 @@ $grey: #aaa;
   font-size: 11px;
 }
 
-.headerTop, .upperRightButtons, .upperLeftIcons, .dates{
+.headerTop, .upperRightButtons, .upperLeftIcons, .dates {
   @include flexRowCenter
 }
 
@@ -88,4 +93,54 @@ $grey: #aaa;
     padding: 9px;
     font-size: 11px;
   }
+}
+
+.quickNews {
+  padding: 10px 0px;
+  border-bottom: 1px double black;
+  .quickNewsInnerBlock {
+    @include flexRowCenter;
+    padding-right: 25px;
+    margin-right: 15px;
+    border-right: 1px solid $lightGrey;
+  }
+
+  @include flexRowCenter;
+  font-size: 12px;
+  .sansHeadline{
+    font-weight: bold;
+  }
+  img{
+    width: 59px;
+    height: 59px;
+  }
+  .weather{
+    padding-right: 40px;
+  }
+  .weatherTop{
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .stocks{
+    padding-right: 25px;
+    margin-right: 15px;
+    border-right: 1px solid $lightGrey;
+  }
+
+  .stock{
+    min-width: 120px;
+    @include flexRowCenter;
+  }
+  .quickNewsText{
+    @include flexColumn;
+    justify-content: center;
+    padding-left: 8px;
+  }
+}
+.doubleBorder{
+  height:4px;
+  display: block;
+  border-bottom: 1px double black;
 }
