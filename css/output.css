@@ -82,7 +82,7 @@
 }
 
 .cellBottom {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid #ebebeb;
 }
@@ -180,13 +180,13 @@
 
 .caption {
   color: #adadb0;
-  font-size: 7px;
+  font-size: 9px;
   font-family: "Domine", serif;
 }
 
 .captionPhoto {
-  color: #ebebeb;
-  font-size: 6px;
+  color: #e1e1e2;
+  font-size: 8px;
   font-family: "Domine", serif;
 }
 
@@ -212,15 +212,15 @@
   width: 100%;
   margin-top: 20px;
 }
+.mainBody img {
+  width: 100%;
+}
 .mainBody .authorImage {
   float: right;
 }
 .mainBody .authorImage img {
   width: 36px;
   height: 36px;
-}
-.mainBody .articleImage img {
-  width: 100%;
 }
 .mainBody ul {
   padding: 0;
@@ -248,17 +248,29 @@
 .mainBody .halves > div {
   width: 50%;
 }
-.mainBody .twoThirdsImage {
+.mainBody .twoThirdsRight {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.mainBody .twoThirdsImage .articleText {
+.mainBody .twoThirdsRight > div:first-child {
   padding-right: 15px;
   width: 33.3333333333%;
 }
-.mainBody .twoThirdsImage .articleImage {
+.mainBody .twoThirdsRight > div:last-child {
   width: 66.6666666667%;
+}
+.mainBody .thirds {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainBody .thirds > div {
+  padding-right: 15px;
+  width: 33.3333333333%;
+}
+.mainBody .thirds > div:last-child {
+  padding-right: 0px;
 }
 .mainBody .noBottomBorder {
   border-bottom: 0px;

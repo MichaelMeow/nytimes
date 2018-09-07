@@ -55,7 +55,7 @@ $updatedGrey: #adadb0;
   border-right: 1px solid $lightGrey;
 }
 @mixin cellBottom {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid $lightGrey;
 }
@@ -66,22 +66,22 @@ $updatedGrey: #adadb0;
 }
 @mixin caption {
   color: $updatedGrey;
-  font-size: 7px;
+  font-size: 9px;
   font-family: 'Domine', serif;
 }
 @mixin captionPhoto {
-  color: $lightGrey;
-  font-size: 6px;
+  color: lighten($updatedGrey, 20%);
+  font-size: 8px;
   font-family: 'Domine', serif;
 
 }
-@mixin twoThirdsImage {
+@mixin twoThirdsRight {
   @include flexRowCenter;
-  .articleText {
+  & > div:first-child{
     padding-right: 15px;
     width: (100/3)* 1%;
-  }
-  .articleImage {
+}
+  & > div:last-child {
     width: ((100/3)*2)* 1%;
   }
 }
@@ -92,6 +92,16 @@ $updatedGrey: #adadb0;
   }
   & > div{
     width: 50%;
+  }
+}
+@mixin thirds {
+  @include flexRowCenter;
+  & > div{
+    padding-right: 15px;
+    width: (100/3)* 1%;
+  }
+  & > div:last-child {
+    padding-right: 0px;
   }
 }
 
@@ -259,6 +269,11 @@ $updatedGrey: #adadb0;
   @include flexRowCenter;
   width: 100%;
   margin-top: 20px;
+
+  img{
+    width: 100%;
+  }
+
   .authorImage{
     img{
       width:36px;
@@ -266,9 +281,7 @@ $updatedGrey: #adadb0;
     }
     float:right;
   }
-  .articleImage img{
-    width: 100%;
-  }
+
   ul {
     padding: 0;
   }
@@ -283,8 +296,11 @@ $updatedGrey: #adadb0;
   .halves{
     @include halves;
   }
-  .twoThirdsImage{
-    @include twoThirdsImage
+  .twoThirdsRight{
+    @include twoThirdsRight;
+  }
+  .thirds{
+    @include thirds;
   }
   .noBottomBorder{
     border-bottom: 0px;
