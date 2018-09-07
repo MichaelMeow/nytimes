@@ -22,6 +22,7 @@ $updatedGrey: #adadb0;
   font-size: 18px;
   font-weight: bold;
   font-family: 'Domine', serif;
+  margin-bottom: -6px;
 }
 @mixin headline2Style {
   font-size: 16px;
@@ -37,11 +38,16 @@ $updatedGrey: #adadb0;
   color: $textGrey;
   font-size: 12px;
   font-family: 'Domine', serif;
+  padding-top:8px;
+  li{
+    padding-top: 8px;
+  }
 }
 @mixin updatedStyle {
   color: $updatedGrey;
   font-size: 11px;
   font-family: 'Domine', serif;
+  padding-top: 8px;
 }
 @mixin cell {
   padding-right: 25px;
@@ -52,6 +58,41 @@ $updatedGrey: #adadb0;
   padding-bottom: 25px;
   margin-bottom: 15px;
   border-bottom: 1px solid $lightGrey;
+}
+@mixin rowBottom {
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+@mixin caption {
+  color: $updatedGrey;
+  font-size: 7px;
+  font-family: 'Domine', serif;
+}
+@mixin captionPhoto {
+  color: $lightGrey;
+  font-size: 6px;
+  font-family: 'Domine', serif;
+
+}
+@mixin twoThirdsImage {
+  @include flexRowCenter;
+  .articleText {
+    padding-right: 15px;
+    width: (100/3)* 1%;
+  }
+  .articleImage {
+    width: ((100/3)*2)* 1%;
+  }
+}
+@mixin halves {
+  @include flexRowCenter;
+  div:first-child {
+    padding-right: 15px;
+  }
+  & > div{
+    width: 50%;
+  }
 }
 
 // main
@@ -199,6 +240,12 @@ $updatedGrey: #adadb0;
 .updated{
   @include updatedStyle;
 }
+.caption{
+  @include caption;
+}
+.captionPhoto{
+  @include captionPhoto;
+}
 .updatedRed{
   @include updatedStyle;
   color: red;
@@ -211,23 +258,40 @@ $updatedGrey: #adadb0;
 .mainBody {
   @include flexRowCenter;
   width: 100%;
+  margin-top: 20px;
+  .authorImage{
+    img{
+      width:36px;
+      height:36px;
+    }
+    float:right;
+  }
+  .articleImage img{
+    width: 100%;
+  }
   ul {
     padding: 0;
   }
   .mainLeftContent{
     width: ((100/3)*2)* 1%;
-    @include flexRowCenter;
-    .oneLeft{
-      width: 50%;
-    }
-    .oneRight{
-      width: 50%;
-    }
   }
+  .leftRow{
+    position: relative;
+    @include flexRowCenter;
+    @include rowBottom;
+  }
+  .halves{
+    @include halves;
+  }
+  .twoThirdsImage{
+    @include twoThirdsImage
+  }
+  .noBottomBorder{
+    border-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
   .mainRightContent{
     width: (100/3)* 1%;
-    img{
-      width: 100%;
-    }
   }
 }

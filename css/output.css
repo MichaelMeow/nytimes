@@ -139,6 +139,7 @@
   font-size: 18px;
   font-weight: bold;
   font-family: "Domine", serif;
+  margin-bottom: -6px;
 }
 
 .headline2 {
@@ -157,17 +158,35 @@
   color: #555555;
   font-size: 12px;
   font-family: "Domine", serif;
+  padding-top: 8px;
+}
+.subheadline li {
+  padding-top: 8px;
 }
 
 .updated {
   color: #adadb0;
   font-size: 11px;
   font-family: "Domine", serif;
+  padding-top: 8px;
 }
 
 .updated {
   color: #adadb0;
   font-size: 11px;
+  font-family: "Domine", serif;
+  padding-top: 8px;
+}
+
+.caption {
+  color: #adadb0;
+  font-size: 7px;
+  font-family: "Domine", serif;
+}
+
+.captionPhoto {
+  color: #ebebeb;
+  font-size: 6px;
   font-family: "Domine", serif;
 }
 
@@ -175,6 +194,7 @@
   color: #adadb0;
   font-size: 11px;
   font-family: "Domine", serif;
+  padding-top: 8px;
   color: red;
 }
 
@@ -190,27 +210,62 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-top: 20px;
+}
+.mainBody .authorImage {
+  float: right;
+}
+.mainBody .authorImage img {
+  width: 36px;
+  height: 36px;
+}
+.mainBody .articleImage img {
+  width: 100%;
 }
 .mainBody ul {
   padding: 0;
 }
 .mainBody .mainLeftContent {
   width: 66.6666666667%;
+}
+.mainBody .leftRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+.mainBody .halves {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.mainBody .mainLeftContent .oneLeft {
+.mainBody .halves div:first-child {
+  padding-right: 15px;
+}
+.mainBody .halves > div {
   width: 50%;
 }
-.mainBody .mainLeftContent .oneRight {
-  width: 50%;
+.mainBody .twoThirdsImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainBody .twoThirdsImage .articleText {
+  padding-right: 15px;
+  width: 33.3333333333%;
+}
+.mainBody .twoThirdsImage .articleImage {
+  width: 66.6666666667%;
+}
+.mainBody .noBottomBorder {
+  border-bottom: 0px;
+  padding-bottom: 0px;
 }
 .mainBody .mainRightContent {
   width: 33.3333333333%;
-}
-.mainBody .mainRightContent img {
-  width: 100%;
 }
 
 /*# sourceMappingURL=output.css.map */
