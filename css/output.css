@@ -1,8 +1,14 @@
+.bodyMargin {
+  height: 100%;
+  margin: 0px 60px;
+  margin-top: 35px;
+}
+
 .content {
   max-width: 1198px;
   position: relative;
-  height: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -43,6 +49,9 @@
   padding: 8px 10px;
   margin: 3px 10px 0px 0px;
 }
+.upperRightButtons i {
+  display: none;
+}
 
 .nyTitle {
   position: relative;
@@ -63,15 +72,19 @@
   position: relative;
   top: 40px;
 }
+.dates .hiddenLinks {
+  display: none;
+}
 
 .navStatic {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   border-bottom: 1px solid black;
 }
 .navStatic span {
-  padding: 9px;
+  padding: 0.6%;
   font-size: 11px;
 }
 
@@ -278,6 +291,56 @@
 }
 .mainBody .mainRightContent {
   width: 33.3333333333%;
+}
+
+@media only screen and (max-width: 1150px) {
+  .stocks {
+    display: none;
+  }
+
+  .opinionTwoColumn > div:first-child {
+    width: 100%;
+    padding-right: 0px;
+    border-right: 0px;
+    margin-right: 0px;
+  }
+
+  .opinionTwoColumn > div:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .title {
+    max-width: 225px;
+  }
+
+  .headerTop {
+    position: relative;
+    top: 30px;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .langs, .navStatic, .searchIcon, .weather {
+    display: none;
+  }
+
+  .upperRightButtons > button {
+    display: none;
+  }
+  .upperRightButtons > i {
+    padding-top: 12px;
+    display: block;
+  }
+
+  .today {
+    display: none;
+  }
+
+  .date {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
