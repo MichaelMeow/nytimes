@@ -1,3 +1,8 @@
+Real News
+![alt text](https://raw.githubusercontent.com/michaelmeow/nytimes/master/img/real.png)
+Fake News
+![alt text](https://raw.githubusercontent.com/michaelmeow/nytimes/master/img/fake.png)
+
 # [Fake New York Times](https://michaelmeow.github.io/nytimes)
 
 #### Fake NY TImes Home Page, 9/7/18
